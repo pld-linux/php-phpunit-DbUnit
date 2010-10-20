@@ -32,23 +32,25 @@ In PEAR status of this package is: %{status}.
 %build
 packagexml2cl package.xml > ChangeLog
 
+mv docs/DbUnit/Samples examples
+
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{php_pear_dir}}
 %pear_package_install
 install -p usr/bin/* $RPM_BUILD_ROOT%{_bindir}
 
-# don't care for tests
-#rm -rf $RPM_BUILD_ROOT%{php_pear_dir}/tests/%{pearname}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
+cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog install.log
-%doc docs/DbUnit/*
 %{php_pear_dir}/.registry/.channel.*/*.reg
 %attr(755,root,root) %{_bindir}/dbunit
 %{php_pear_dir}/PHPUnit/Extensions/Database
+
+%{_examplesdir}/%{name}-%{version}
