@@ -1,14 +1,14 @@
-%include	/usr/lib/rpm/macros.php
 %define		status		stable
 %define		pearname	DbUnit
+%include	/usr/lib/rpm/macros.php
 Summary:	%{pearname} - DbUnit port for PHP/PHPUnit
 Name:		php-phpunit-DbUnit
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
-# Source0-md5:	07b6b9d544c08b54aea840ed05a99ed0
+# Source0-md5:	cc150251100b74879ba22a211079e8f4
 URL:		http://pear.phpunit.de/package/DbUnit/
 BuildRequires:	php-channel(pear.phpunit.de)
 BuildRequires:	php-packagexml2cl
@@ -16,7 +16,11 @@ BuildRequires:	php-pear-PEAR >= 1:1.9.1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php-channel(pear.phpunit.de)
+Requires:	php-pdo
 Requires:	php-pear
+Requires:	php-reflection
+Requires:	php-simplexml
+Requires:	php-spl
 Requires:	php-symfony-YAML >= 1.0.2
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
