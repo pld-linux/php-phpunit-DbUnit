@@ -9,7 +9,7 @@ License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
 # Source0-md5:	cc150251100b74879ba22a211079e8f4
-URL:		http://pear.phpunit.de/package/DbUnit/
+URL:		http://pear.phpunit.de/
 BuildRequires:	php-channel(pear.phpunit.de)
 BuildRequires:	php-packagexml2cl
 BuildRequires:	php-pear-PEAR >= 1:1.9.1
