@@ -22,7 +22,7 @@ Requires:	php-channel(pear.phpunit.de)
 Requires:	php-pear
 Requires:	php-phpunit-PHPUnit >= 3.7.0
 Requires:	php-reflection
-Requires:	php-symfony2-YAML >= 2.1.0
+Requires:	php-symfony2-Yaml >= 2.1.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
