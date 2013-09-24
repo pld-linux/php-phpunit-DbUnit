@@ -1,44 +1,43 @@
 %define		status		stable
 %define		pearname	DbUnit
 %include	/usr/lib/rpm/macros.php
-Summary:	%{pearname} - DbUnit port for PHP/PHPUnit
-Name:		php-phpunit-DbUnit
-Version:	1.2.2
+Summary:	DbUnit port for PHP/PHPUnit
+Name:		php-phpunit-%{pearname}
+Version:	1.2.3
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
-# Source0-md5:	c758bd5498c95b5bf37d7fd3e2ac6100
-URL:		http://pear.phpunit.de/
+# Source0-md5:	c47036ac20a4517a83dd7837edccfd5d
+URL:		https://github.com/sebastianbergmann/phpunit/
 BuildRequires:	php-channel(pear.phpunit.de)
 BuildRequires:	php-packagexml2cl
 BuildRequires:	php-pear-PEAR >= 1:1.9.4
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.580
 Requires:	php(pdo)
+Requires:	php(reflection)
 Requires:	php(simplexml)
 Requires:	php(spl)
 Requires:	php-channel(pear.phpunit.de)
 Requires:	php-pear
 Requires:	php-phpunit-PHPUnit >= 3.7.0
-Requires:	php-reflection
-Requires:	php-symfony2-Yaml <= 2.1.99
 Requires:	php-symfony2-Yaml >= 2.1.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-DbUnit port for PHP/PHPUnit
+DbUnit port for PHP/PHPUnit to support database interaction testing.
 
 In PEAR status of this package is: %{status}.
 
 %prep
 %pear_package_setup
 
+mv docs/DbUnit/Samples examples
+
 %build
 packagexml2cl package.xml > ChangeLog
-
-mv docs/DbUnit/Samples examples
 
 %install
 rm -rf $RPM_BUILD_ROOT
