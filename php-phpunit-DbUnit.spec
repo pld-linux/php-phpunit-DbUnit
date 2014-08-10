@@ -3,12 +3,12 @@
 %include	/usr/lib/rpm/macros.php
 Summary:	DbUnit port for PHP/PHPUnit
 Name:		php-phpunit-%{pearname}
-Version:	1.2.3
+Version:	1.3.1
 Release:	1
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
-# Source0-md5:	c47036ac20a4517a83dd7837edccfd5d
+# Source0-md5:	ab9477d04b83b9d76d784fb2b5cb4319
 URL:		https://github.com/sebastianbergmann/phpunit/
 BuildRequires:	php-channel(pear.phpunit.de)
 BuildRequires:	php-packagexml2cl
