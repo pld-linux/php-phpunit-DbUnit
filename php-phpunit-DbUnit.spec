@@ -4,7 +4,7 @@
 Summary:	DbUnit port for PHP/PHPUnit
 Name:		php-phpunit-%{pearname}
 Version:	1.3.1
-Release:	1
+Release:	2
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
@@ -21,8 +21,8 @@ Requires:	php(simplexml)
 Requires:	php(spl)
 Requires:	php-channel(pear.phpunit.de)
 Requires:	php-pear
-Requires:	php-phpunit-PHPUnit >= 3.7.0
 Requires:	php-symfony2-Yaml >= 2.1.0
+Requires:	phpunit >= 3.7.0
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
