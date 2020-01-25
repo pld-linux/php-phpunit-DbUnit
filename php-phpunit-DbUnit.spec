@@ -1,6 +1,5 @@
 %define		status		stable
 %define		pearname	DbUnit
-%include	/usr/lib/rpm/macros.php
 Summary:	DbUnit port for PHP/PHPUnit
 Name:		php-phpunit-%{pearname}
 Version:	1.3.1
