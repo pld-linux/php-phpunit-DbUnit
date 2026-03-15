@@ -3,7 +3,7 @@
 Summary:	DbUnit port for PHP/PHPUnit
 Name:		php-phpunit-%{pearname}
 Version:	1.3.1
-Release:	2
+Release:	3
 License:	BSD License
 Group:		Development/Languages/PHP
 Source0:	http://pear.phpunit.de/get/%{pearname}-%{version}.tgz
